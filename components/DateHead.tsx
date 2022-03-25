@@ -17,9 +17,7 @@ const Text = styled.Text`
   font-size: 24px;
   color: #fff;
 `;
-const StatusBar = styled.StatusBar`
-  background-color: #26a69a;
-`;
+const StatusBar = styled.StatusBar``;
 
 const DateHead = ({date}: IDateProps) => {
   const year = date.getFullYear();
@@ -30,7 +28,7 @@ const DateHead = ({date}: IDateProps) => {
   return (
     <>
       <ViewTop style={[{height: top}]} />
-      <StatusBar />
+      <StatusBar backgroundColor="#26a69a" barStyle="light-content" />
       <View>
         <Text>{formatted}</Text>
       </View>
