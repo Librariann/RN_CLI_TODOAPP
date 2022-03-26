@@ -7,6 +7,10 @@ import {
 } from 'react-native';
 import styled from 'styled-components/native';
 
+interface IonInsert {
+  onInsert: Function;
+}
+
 const BlockView = styled.View`
   background-color: white;
   height: 64px;
@@ -38,9 +42,10 @@ const CircleWrapper = styled.View`
 `;
 const Image = styled.Image``;
 
-const AddTodo = () => {
+const AddTodo = ({onInsert}: IonInsert) => {
   const [text, setText] = useState('');
   const onPress = () => {
+    onInsert(text);
     setText('');
     Keyboard.dismiss();
   };
