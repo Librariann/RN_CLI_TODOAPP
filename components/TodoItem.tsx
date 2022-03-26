@@ -71,7 +71,6 @@ const TodoItem = ({id, text, done, onToggle, onRemove}: IProps) => {
       ],
       {
         cancelable: true,
-        onDismis: () => {},
       },
     );
   };
